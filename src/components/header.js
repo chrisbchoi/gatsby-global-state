@@ -7,10 +7,6 @@ import {
 } from "../context/GlobalContextProvider"
 
 const Header = ({ siteTitle }) => {
-  const dispatch = useContext(GlobalDispatchContext)
-  const state = useContext(GlobalStateContext)
-  console.log(state)
-  console.log(dispatch)
   return (
     <header
       style={{
@@ -37,15 +33,6 @@ const Header = ({ siteTitle }) => {
             {siteTitle}
           </Link>
         </h1>
-        {state.theme}
-        <button
-          type="button"
-          onClick={() => {
-            dispatch({ type: "TOGGLE_THEME" })
-          }}
-        >
-          Toggle Theme
-        </button>
       </div>
     </header>
   )
