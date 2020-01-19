@@ -44,7 +44,7 @@ const IndexPage = () => {
         <form>
           <div
             className="g-recaptcha"
-            data-sitekey="6LdKYcUUAAAAAB_6limyj3DM36HcfOTAZ_VwskkF"
+            data-sitekey={process.env.RECAPTURE_SITE_KEY}
           ></div>
         </form>
       </React.Fragment>
