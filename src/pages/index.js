@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-
+import Helmet from "react-helmet"
 import {
   GlobalDispatchContext,
   GlobalStateContext,
@@ -32,6 +32,23 @@ const IndexPage = () => {
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
+
+      <React.Fragment>
+        <Helmet>
+          <script
+            src={`https://www.google.com/recaptcha/api.js? r=${Math.random()}`}
+            async
+            defer
+          ></script>
+        </Helmet>
+        <form>
+          <div
+            className="g-recaptcha"
+            data-sitekey="6LdKYcUUAAAAAB_6limyj3DM36HcfOTAZ_VwskkF"
+          ></div>
+        </form>
+      </React.Fragment>
+
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )

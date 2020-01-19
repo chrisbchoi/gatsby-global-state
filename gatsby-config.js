@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Testing global state`,
+    description: `sample to show off unit testing and global state`,
+    author: `chris choi`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-recaptcha`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
